@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    height: 120vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/sung.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar{
+    height:12%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+  
+
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+    border-radius: 20%;
+}
+nav{
+    flex: 1;
+    text-align: right; 
+}
+nav ul li{
+    list-style:none;
+    display:inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 13px;   
+}
+/* nav ul li.active {
+    background-color: #ae00ff;
+    transition: 0.3 ease background-col;
+} */
+a {
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    padding: 0 10px;
+}
+a:hover{
+    color:#fff;
+    /* color:#ae00ff; */
+    
+}
+a:after{
+    position:absolute;
+    content: "";
+    background-color:#ae00ff;
+    height: 3px;
+    width:0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover:after{
+    width: 100%;
+    
+    
+
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+/* .col{
+}
+.arise {
+    text-align: center;
+} */
+h1{
+    color: #fff;
+    font-size: 70px;
+}
+p{
+    color: #fff;
+    font-size: 15px;
+    max-width: 400px;
+}
+/* button{
+    width: 180px;
+    color: #000;
+    font-size: 15px;
+    border-radius:8px ;
+    padding: 12px 0;
+    background-color: #fff;
+    border: 0;
+    outline: none;
+    margin-top: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+button{
+    color: white;
+    background-color:#444444;
+    transition:ease;
+}
+button:hover{
+    background-color:rosybrown;
+    transition: 0.3s;
+} */
+button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #ae00ff;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #ae00ff;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #ae00ff;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   button:hover::before {
+    width: 105%;
+   }
+   
+   button:hover {
+    color: #111;
+    letter-spacing: 5px;
+   }
+   .Scroll {
+    width: 45px;
+    height: 70px;
+    border: #000 solid 2px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+   }
+   .Scroll span {
+    background-color: #fff;
+    width: 5px;
+    height: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+    position: relative;
+   }
+   .Scroll span::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: translateY(-10px) rotate(135deg);
+    left: -6px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: scroll 1.8s infinite linear;
+   }
+   .Scroll span::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: translateY(-10px) rotate(135deg);
+    left: -6px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: scroll 1.8s infinite linear;
+    animation-delay: 0.8s;
+   }
+   .Scroll {
+    margin-left: 220%;
+   }
+   @keyframes scroll {
+    0% {
+        margin-top: 10px;
+        opacity: 0;
+    }
+    50% {
+        margin-top: 25px;
+        opacity: 1;
+    }
+    100% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+   }
+    /* iframe {
+        display: none;
+    } */
+    iframe {
+         margin-left: 40%;
+         margin-bottom: 50%;
+        
+    }
+   .left-img {
+    width: 50%;
+    height: 100vh;
+    background-image: url(/jin.jpg);
+    background-position: center;
+    background-size: cover;
+   }
+   .left-img:hover {
+    transform: scale(1.050);
+    transition: .3s ease-in;
+   }
+   .col h1 {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/army.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: aura 20s linear infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   }
+   @keyframes aura {
+    100% {
+        background-position: 2000px 0;
+    }
+   }
+   /* .right h2 {
+    display: block;
+    text-align: center;
+    color: #cab1d5;
+    font-weight: bold;
+    font-size: 5em;
+   } */
+   .right p {
+    margin-top: 100px;
+    margin-left: 4rem;
+    letter-spacing: 2px;
+   }
+   .about {
+    display: flex;
+    background-color: black;
+    animation: animate 2s forwards;
+   }
+   .right h1 {
+    background-color: black;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/Igris\ _\ Solo\ Leveling\ _\ Sung\ Jin-Woo\ Art\ Print\ by\ PaulArt.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: aura 20s linear infinite;
+    text-transform: uppercase;
+   }
+   .right {
+    letter-spacing: 15px;
+   }
+   .title h1 {
+    background-color: black;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/Igris\ _\ Solo\ Leveling\ _\ Sung\ Jin-Woo\ Art\ Print\ by\ PaulArt.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: aura 20s linear infinite;
+    text-transform: uppercase;
+    
+   }
+   /* #waifu {
+   
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/army.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: aura 20s linear infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+   }
+   #waifu h3 {
+    background-color: black;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/Igris\ _\ Solo\ Leveling\ _\ Sung\ Jin-Woo\ Art\ Print\ by\ PaulArt.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: aura 20s linear infinite;
+    text-transform: uppercase;
+   } */
+   section {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .skill {
+    background-image: url(/shadow\ army.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+   }
+   .title {
+    text-align: center;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    background-color: black;
+   }
+   .card {
+    height: 500px;
+    width: 400px;
+    padding: 20px;
+    background: #1c0f23;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    font-size: 17px;
+    color: white;
+   }
+   .first-pic {
+    width: 400px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: absolute;
+    object-fit: cover;
+   }
+   .first-pic:hover {
+    transform: scale(1.075);
+    transition: .2s ease-in;
+   }
+   .second-pic {
+    width: 400px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+   }
+   .second-pic:hover {
+    transform: scale(1.075);
+    transition: .2s ease-in;
+   }
+   .third-pic {
+    width: 400px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+   }
+   .third-pic:hover {
+    transform: scale(1.075);
+    transition: .2s ease-in;
+   }
+   .left-text {
+    /* background-color:#ae00ff; */
+    /* letter-spacing: 1px; */
+    /* background:url(/reze.jpg); */
+   }
+   .mid-text {
+    /* background-color: aqua; */
+   }
+   .right-text {
+    letter-spacing: 1px;
+   }
+   .container {
+    animation: delay 2s forwards;
+   }
+   nav .fa {
+    color: white;
+   }
+   .head h1 {
+    text-align: center;
+    color: white;
+    background-color: black;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/Igris\ _\ Solo\ Leveling\ _\ Sung\ Jin-Woo\ Art\ Print\ by\ PaulArt.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: aura 20s linear infinite;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+   }
+   .left-p img {
+    height: 500px;
+    height: 500px;
+   }
+   .left-p {
+    position: relative;
+   }
+   .left-p img {
+    max-width: 100%;
+    width: 550px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+   }
+   /* #vinny {
+    height: 550px;
+    width: 550px;
+   } */
+   .abi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
+    text-align: center;
+    cursor: pointer;
+   }
+   /* .layer {
+    background: linear-gradient(rgba(0,0,0,0.5) 0%, #191919);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 12px;
+    transition: all .40s;
+    color: #fff ;
+   }
+   .layer:hover {
+    background: linear-gradient(rgba(0,0,0,0.5) 0%, #191919);
+   }
+   .layer h3 {
+    position: absolute0;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+   }
+   .layer:hover h3 {
+    bottom: 52%;
+    opacity: 1;
+   } */
+   .left-p {
+    position: relative;
+    width: 400px;
+    margin: 50px;
+   }
+   .abi {
+    margin-top: 0;
+   }
+   .left-p img {
+    display: block;
+    width: 100%;
+   }
+   .layer {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 50px;
+    opacity: 0;
+    transition: top  .5s;
+    }
+    .layer > * {
+         transform: translateY(20px);
+         transition: transform 0.5s;
+    }
+    .layer:hover{
+        opacity: 1;
+    }
+    .layer:hover > *{
+        transform: translateY(0);
+    }
+
+   @keyframes delay {
+    from {
+        opacity: 0;
+        transform: translateY(-4em)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+   }
+   @keyframes animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+   }
+   @media (max-width:500px) {
+    nav {
+        padding-left: 150px; 
+    }
+    ul li {
+        padding-top:10px;
+    }
+   } 
+   @media only screen and (max-width:500px) {
+    nav ul li {
+        display: flex;
+        justify-content: space-between;
+    }
+    .col h1 {
+        font-size: 50px;
+    }
+    .col p {
+        /* font-size: 15px;
+        font-weight: bold;
+        display: none;
+        text-align: right; */
+    }
+   }
